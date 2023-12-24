@@ -1,0 +1,24 @@
+.footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  height: 56px;
+
+  border-top: 1px solid #bfc4c9;
+
+  &__social {
+    display: inline-flex;
+    gap: 24px;
+    align-items: flex-start;
+  }
+
+  &__item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 24px;
+    height: 24px;
+  }
+}

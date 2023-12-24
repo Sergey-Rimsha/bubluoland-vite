@@ -1,0 +1,30 @@
+.layout {
+  &__block {
+    height: 100%;
+  }
+
+  &__content {
+    display: flex;
+    margin-top: 62px;
+  }
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  width: 1110px;
+  min-height: 100vh;
+  margin: 0 auto;
+  padding: 32px 0 0;
+
+  border: 1px solid blue;
+}
+
+.main {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  margin-left: 30px;
+}

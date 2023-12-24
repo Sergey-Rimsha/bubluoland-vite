@@ -1,0 +1,27 @@
+.menu {
+  min-width: 255px;
+  border: 1px solid rebeccapurple;
+
+  &__title {
+    height: 36px;
+    border-bottom: 1px solid var(--main-dark);
+  }
+
+  &__subTitle {
+    margin-top: 42px;
+  }
+
+  &__block {
+    margin-left: 20px;
+  }
+
+  &__link {
+    display: flex;
+    margin-top: 16px;
+
+    & :last-child {
+      margin-left: 6px;
+      color: var(--grey-black-40);
+    }
+  }
+}

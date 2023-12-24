@@ -1,0 +1,66 @@
+@mixin typography($fontSize, $lineHeight, $fontWeight, $letterSpacing) {
+  margin: 0;
+
+  font-size: $fontSize;
+  font-weight: $fontWeight;
+  line-height: $lineHeight;
+  letter-spacing: $letterSpacing;
+}
+
+.h1 {
+  @include typography(
+    var(--font-size-h1),
+    var(--line-height-h1),
+    var(--font-weight-medium),
+    var(--font-letter-spacing-lg)
+  );
+}
+
+.h3 {
+  /* desktop/h3 */
+  @include typography(
+    var(--font-size-h3),
+    var(--line-height-h3),
+    var(--font-weight-bold),
+    var(--font-letter-spacing-md)
+  );
+}
+
+.h5 {
+  /* desktop/h5 */
+  @include typography(
+    var(--font-size-h5),
+    var(--line-height-h5),
+    var(--font-weight-bold),
+    var(--font-letter-spacing-md)
+  );
+}
+
+.sub-sm {
+  /* desktop / Subtitle - Small */
+  @include typography(
+    var(--font-size-sub-sm),
+    var(--line-height-sub-sm),
+    var(--font-weight-semibold),
+    var(--font-letter-spacing-md)
+  );
+}
+
+.body-lg {
+  /* desktop / Body - Large */
+  @include typography(
+    var(--font-size-body-lg),
+    var(--line-height-body-lg),
+    var(--font-weight-regular),
+    var(--font-letter-spacing-md)
+  );
+}
+
+.body-sm {
+  @include typography(
+    var(--font-size-body-sm),
+    var(--line-height-body-sm),
+    var(--font-weight-regular),
+    var(--font-letter-spacing-md)
+  );
+}

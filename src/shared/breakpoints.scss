@@ -1,0 +1,46 @@
+:root {
+  --xs-viewport: (max-width: 599px);
+  --s-viewport: (max-width: 767px);
+  --m-viewport: (max-width: 1023px);
+  --l-viewport: (max-width: 1439px);
+  --xl-viewport: (max-width: 1919px);
+
+  // line heights
+  --line-height-h1: 64px;
+  --line-height-h2: 54px;
+  --line-height-h3: 40px;
+  --line-height-h4: 30px;
+  --line-height-h5: 28px;
+  --line-height-sub-lg: 24px;
+  --line-height-sub-sm: 18px;
+  --line-height-body-lg: 24px;
+  --line-height-body-sm: 22px;
+  --line-height-info: 16px;
+  --line-height-btn-lg: 20px;
+  --line-height-btn-sm: 18px;
+
+  // font sizes 16px 18px 24px 30px 36px
+  --font-size-h1: 52px;
+  --font-size-h2: 44px;
+  --font-size-h3: 32px;
+  --font-size-h4: 24px;
+  --font-size-h5: 18px;
+  --font-size-sub-lg: 16px;
+  --font-size-sub-sm: 14px;
+  --font-size-body-lg: 16px;
+  --font-size-body-sm: 14px;
+  --font-size-info: 12px;
+  --font-size-btn-lg: 16px;
+  --font-size-btn-sm: 14px;
+
+  // font weights
+  --font-weight-bold: 700;
+  --font-weight-semibold: 600;
+  --font-weight-medium: 500;
+  --font-weight-regular: 400;
+
+  // font letter-spacing
+  --font-letter-spacing-lg: 0.2px;
+  --font-letter-spacing-md: 0.1px;
+  --font-letter-spacing-sm: 0;
+}

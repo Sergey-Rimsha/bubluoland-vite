@@ -1,5 +1,7 @@
 import { ReactElement } from 'react';
 
+import cn from 'clsx';
+
 import s from './menu.module.scss';
 
 import { Typography } from '@/shared/ui';
@@ -7,13 +9,17 @@ import { Typography } from '@/shared/ui';
 export const Menu = (): ReactElement => {
   return (
     <menu className={s.menu}>
-      <div className={s.menu__title}>
+      <div className={cn(s.menu__title, s.menu__title_active)}>
         <Typography variant="h5" as="h5">
           Витрина книг
         </Typography>
       </div>
       <div className={s.menu__block}>
-        <Typography variant="body-lg">Все книги</Typography>
+        <div className={cn(s.menu__link)}>
+          <Typography className={s.menu__link_active} variant="body-lg">
+            Все книги
+          </Typography>
+        </div>
         <div className={s.menu__link}>
           <Typography variant="body-lg">Бизнес-книги</Typography>
           <Typography variant="body-lg">14</Typography>

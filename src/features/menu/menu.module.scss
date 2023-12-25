@@ -3,8 +3,35 @@
   border: 1px solid rebeccapurple;
 
   &__title {
+    position: relative;
     height: 36px;
-    border-bottom: 1px solid var(--main-dark);
+
+    &::after {
+      content: '';
+
+      position: absolute;
+      bottom: 0;
+
+      display: block;
+
+      width: 100%;
+      height: 2px;
+
+      background: var(--main-dark);
+    }
+
+
+    &_active {
+      background-color: var(--main-dark);
+      background-image: var(--button-hover);
+      background-clip: text;
+
+      -webkit-text-fill-color: transparent;
+
+      &::after {
+        background-image: var(--button-hover);
+      }
+    }
   }
 
   &__subTitle {
@@ -19,9 +46,21 @@
     display: flex;
     margin-top: 16px;
 
-    & :last-child {
-      margin-left: 6px;
+    &:last-child {
+      margin-right: 6px;
       color: var(--grey-black-40);
+    }
+
+    &_active {
+      font-size: var(--font-size-h5) !important;
+      font-weight: var(--font-weight-bold) !important;
+      line-height: var(--line-height-h5) !important;
+
+      background-color: var(--main-dark);
+      background-image: var(--button-hover);
+      background-clip: text;
+
+      -webkit-text-fill-color: transparent;
     }
   }
 }

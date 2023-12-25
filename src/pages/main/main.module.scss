@@ -7,6 +7,18 @@
     display: flex;
     margin-top: 62px;
   }
+
+  &__main {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin-left: 30px;
+  }
+
+  &__wrap {
+    margin-top: 32px;
+    border: 1px solid red;
+  }
 }
 
 .container {
@@ -20,11 +32,4 @@
   padding: 32px 0 0;
 
   border: 1px solid blue;
-}
-
-.main {
-  display: flex;
-  justify-content: space-between;
-  width: 100%;
-  margin-left: 30px;
 }

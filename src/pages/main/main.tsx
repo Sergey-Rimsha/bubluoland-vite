@@ -3,7 +3,7 @@ import { ReactElement } from 'react';
 import s from './main.module.scss';
 
 import { Menu } from '@/features';
-import { Header, Footer } from '@/widgets';
+import { FilterMenu, Footer, Header } from '@/widgets';
 
 export const Main = (): ReactElement => {
   return (
@@ -13,9 +13,11 @@ export const Main = (): ReactElement => {
           <Header />
           <div className={s.layout__content}>
             <Menu />
-            <div className={s.main}>
-              <div>search-bar</div>
-              <section>content outlet</section>
+            <div className={s.layout__main}>
+              <FilterMenu />
+              <div className={s.layout__wrap}>
+                <section>content outlet</section>
+              </div>
             </div>
           </div>
         </div>

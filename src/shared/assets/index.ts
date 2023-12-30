@@ -8,3 +8,5 @@ export { Search } from './icons/search.tsx';
 export { Filter } from './icons/filter.tsx';
 export { Grid } from './icons/grid.tsx';
 export { List } from './icons/list.tsx';
+export { DefaultImgBook } from './icons/default-img-book.tsx';
+export { Star } from './icons/star.tsx';

@@ -1,0 +1,64 @@
+.card {
+  display: flex;
+  flex-direction: column;
+
+  width: 190px;
+  height: 470px;
+  padding: 8px 8px 16px;
+
+  background: var(--main-white, #fff);
+  border-radius: 10px;
+
+  /* плашка */
+  box-shadow:
+    0 1px 5px 0 rgba(191, 196, 201, 24%),
+    0 3px 4px 0 rgba(191, 196, 201, 18%),
+    0 2px 4px 0 rgba(191, 196, 201, 20%);
+
+  &__img {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 174px;
+    height: 242px;
+
+    background: var(--grey-black-5, #f9f9fa);
+    border: 1px solid var(--grey-black-40);
+    border-radius: 10px;
+  }
+
+  &__stars {
+    height: 24px;
+    margin-top: 16px;
+
+    & svg {
+      margin-right: 6px;
+    }
+  }
+
+  &__title {
+    margin-top: 16px;
+  }
+
+  &__button {
+    display: flex;
+    justify-content: center;
+    margin-top: 16px;
+  }
+}
+
+.button {
+  display: flex;
+  flex-shrink: 0;
+  align-items: center;
+  justify-content: center;
+
+  width: 166px;
+  height: 40px;
+  padding: 11px 21px 11px 22px;
+
+  background: var(--main-white, #fff);
+  border: 1px solid var(--grey-black-20, #bfc4c9);
+  border-radius: 20px;
+}

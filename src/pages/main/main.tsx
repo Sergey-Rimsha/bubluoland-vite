@@ -3,7 +3,7 @@ import { ReactElement } from 'react';
 import s from './main.module.scss';
 
 import { Menu } from '@/features';
-import { FilterMenu, Footer, Header } from '@/widgets';
+import { BookCard, FilterMenu, Footer, Header } from '@/widgets';
 
 export const Main = (): ReactElement => {
   return (
@@ -16,7 +16,9 @@ export const Main = (): ReactElement => {
             <div className={s.layout__main}>
               <FilterMenu />
               <div className={s.layout__wrap}>
-                <section>content outlet</section>
+                <section>
+                  <BookCard />
+                </section>
               </div>
             </div>
           </div>

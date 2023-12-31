@@ -2,7 +2,7 @@ import { SVGProps, memo, ReactElement } from 'react';
 /* eslint-disable */
 
 interface Props extends SVGProps<SVGSVGElement> {
-  active?: boolean;
+  active?: 'active';
 }
 
 export const Star = memo(

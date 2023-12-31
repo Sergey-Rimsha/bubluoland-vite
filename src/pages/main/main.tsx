@@ -2,6 +2,7 @@ import { ReactElement } from 'react';
 
 import s from './main.module.scss';
 
+import { cards } from '@/entities/stateCards.ts';
 import { Menu } from '@/features';
 import { BookCard, FilterMenu, Footer, Header } from '@/widgets';
 
@@ -16,8 +17,10 @@ export const Main = (): ReactElement => {
             <div className={s.layout__main}>
               <FilterMenu />
               <div className={s.layout__wrap}>
-                <section>
-                  <BookCard />
+                <section className={s.books}>
+                  {cards.map(item => {
+                    return <BookCard key={item.id} {...item} />;
+                  })}
                 </section>
               </div>
             </div>

@@ -17,8 +17,13 @@
 
   &__wrap {
     margin-top: 32px;
-    border: 1px solid red;
   }
+}
+
+.books {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 19px;
 }
 
 .container {

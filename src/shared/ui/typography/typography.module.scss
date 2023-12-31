@@ -57,10 +57,31 @@
 }
 
 .body-sm {
+  /* desktop / Body - Small */
   @include typography(
     var(--font-size-body-sm),
     var(--line-height-body-sm),
     var(--font-weight-regular),
     var(--font-letter-spacing-md)
+  );
+}
+
+.btn-lg {
+  /* mobile/button-Large */
+  @include typography(
+    var(--font-size-btn-lg),
+    var(--line-height-btn-lg),
+    var(--font-weight-semibold),
+    var(--font-letter-spacing-lg)
+  );
+}
+
+.btn-sm {
+  /* mobile/button-Small */
+  @include typography(
+    var(--font-size-btn-sm),
+    var(--line-height-btn-sm),
+    var(--font-weight-semibold),
+    var(--font-letter-spacing-lg)
   );
 }

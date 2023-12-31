@@ -1,6 +1,5 @@
 .menu {
   min-width: 255px;
-  border: 1px solid rebeccapurple;
 
   &__title {
     position: relative;
@@ -46,8 +45,8 @@
     display: flex;
     margin-top: 16px;
 
-    &:last-child {
-      margin-right: 6px;
+    & span {
+      margin-left: 6px;
       color: var(--grey-black-40);
     }
 

@@ -6,16 +6,15 @@ import s from './button.module.scss';
 
 interface PropsButton extends ButtonHTMLAttributes<HTMLButtonElement> {
   variant?: 'primary' | 'secondary' | 'text';
-  classStyle?: string;
   size?: 'sm' | 'lg';
 }
 export const Button = (props: PropsButton): ReactElement => {
-  const { classStyle, variant = 'primary', size = 'lg', children } = props;
+  const { variant = 'primary', size = 'lg', className, children, ...rest } = props;
 
-  const style = cn(s.button, s[size], s[variant], classStyle);
+  const style = cn(s.button, s[size], s[variant], className);
 
   return (
-    <button className={style} type="button" {...props}>
+    <button className={style} type="button" {...rest}>
       {children}
     </button>
   );

@@ -1,1 +1,1 @@
-export { Main } from './main/main.tsx';
+export { Books } from './books/books.tsx';

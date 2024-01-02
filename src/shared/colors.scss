@@ -2,7 +2,16 @@
   /* Global colors */
   --color-white: #fff;
   --main-dark: #363636;
-  --grey-black-40: #A7A7A7;
-  --button-hover: linear-gradient(90deg, #F83600 -53.35%, #F9D423 297.76%);
-  --box-shadow: 0 1px 5px 0 rgba(191, 196, 201, 24%), 0 3px 4px 0 rgba(191, 196, 201, 18%), 0 2px 4px 0 rgba(191, 196, 201, 20%);
+  --grey-black-5: #f9f9fa;
+  --grey-black-10: #ebebeb;
+  --grey-black-20: #bfc4c9;
+  --grey-black-40: #a7a7a7;
+  --grey-black-70: #727272;
+  --button-color-primary: #ff740f;
+  --button-primary-bg: linear-gradient(232deg, #f83600 -53.35%, #f9d423 297.76%);
+  --button-hover: linear-gradient(90deg, #f83600 -53.35%, #f9d423 297.76%);
+  --button-hover-shadow: 0 2px 5px 0 rgba(54, 54, 54, 10%);
+  --button-target-shadow: 0 1px 10px 0 rgba(249, 89, 8, 20%), 0 3px 4px 0 rgba(222, 125, 11, 20%);
+  --box-shadow: 0 1px 5px 0 rgba(191, 196, 201, 24%), 0 3px 4px 0 rgba(191, 196, 201, 18%),
+    0 2px 4px 0 rgba(191, 196, 201, 20%);
 }

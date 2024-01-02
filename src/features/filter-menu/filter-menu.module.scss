@@ -41,6 +41,10 @@
     border: none;
     outline: none;
   }
+
+  @media screen and (width <= 960px) {
+    width: 274px;
+  }
 }
 
 .buttonFilter {

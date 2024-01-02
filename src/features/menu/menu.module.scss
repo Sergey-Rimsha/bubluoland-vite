@@ -19,7 +19,6 @@
       background: var(--main-dark);
     }
 
-
     &_active {
       background-color: var(--main-dark);
       background-image: var(--button-hover);
@@ -61,5 +60,9 @@
 
       -webkit-text-fill-color: transparent;
     }
+  }
+
+  @media screen and (width <= 960px) {
+    display: none;
   }
 }

@@ -16,8 +16,8 @@ export const MainLayout = (): ReactElement => {
           <Menu />
           <Outlet />
         </div>
+        <Footer />
       </div>
-      <Footer />
     </div>
   );
 };

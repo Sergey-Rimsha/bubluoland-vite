@@ -42,3 +42,14 @@
     }
   }
 }
+
+.menu {
+  cursor: pointer;
+
+  width: 32px;
+  height: 32px;
+  margin-right: 24px;
+
+  background-color: var(--color-white);
+  border: none;
+}

@@ -10,3 +10,4 @@ export { Grid } from './icons/grid.tsx';
 export { List } from './icons/list.tsx';
 export { DefaultImgBook } from './icons/default-img-book.tsx';
 export { Star } from './icons/star.tsx';
+export { BurgerMenu } from './icons/burger-menu.tsx';

@@ -13,8 +13,8 @@
     flex-wrap: wrap;
     gap: 20px;
 
-    @media screen and (width <= 860px) {
-      gap: 32px;
+    @media screen and (width <= 960px) {
+      gap: 32px 35px;
     }
   }
 

@@ -75,4 +75,13 @@
       font-size: 12px;
     }
   }
+
+  @media screen and (width <= 440px) {
+    align-items: center;
+    width: 288px;
+
+    &__button_size {
+      width: 256px;
+    }
+  }
 }

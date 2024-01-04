@@ -12,6 +12,10 @@
       max-width: 640px;
       margin: 0 15px;
     }
+
+    @media screen and (width <= 440px) {
+      max-width: 288px;
+    }
   }
 
   &__block {

@@ -1,7 +1,6 @@
 .filter {
   display: flex;
   justify-content: space-between;
-  height: 38px;
 
   &__block {
     display: flex;
@@ -45,6 +44,20 @@
   @media screen and (width <= 960px) {
     width: 274px;
   }
+
+  @media screen and (width <= 520px) {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 32px;
+    height: 32px;
+    padding: 0;
+
+    & input {
+      display: none;
+    }
+  }
 }
 
 .buttonFilter {
@@ -66,6 +79,20 @@
   & span {
     color: var(--grey-black-40);
   }
+
+  @media screen and (width <= 520px) {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 32px;
+    height: 32px;
+    padding: 0;
+
+    & span {
+      display: none;
+    }
+  }
 }
 
 .button {
@@ -85,5 +112,10 @@
 
   &_active {
     background-image: var(--button-hover);
+  }
+
+  @media screen and (width <= 520px) {
+    width: 32px;
+    height: 32px;
   }
 }

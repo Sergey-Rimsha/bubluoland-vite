@@ -1,5 +1,6 @@
 .footer {
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
   justify-content: space-between;
 
@@ -21,5 +22,9 @@
 
     width: 24px;
     height: 24px;
+  }
+
+  @media screen and (width <= 520px) {
+    justify-content: center;
   }
 }

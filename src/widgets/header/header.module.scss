@@ -40,6 +40,10 @@
       width: 58px;
       height: 58px;
     }
+
+    @media screen and (width <= 520px) {
+      display: none;
+    }
   }
 }
 

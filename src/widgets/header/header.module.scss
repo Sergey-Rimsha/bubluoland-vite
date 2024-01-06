@@ -50,10 +50,16 @@
 .menu {
   cursor: pointer;
 
+  display: none;
+
   width: 32px;
   height: 32px;
   margin-right: 24px;
 
   background-color: var(--color-white);
   border: none;
+
+  @media screen and (width <= 960px) {
+    display: block;
+  }
 }

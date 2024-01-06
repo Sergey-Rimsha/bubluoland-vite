@@ -4,10 +4,28 @@ import cn from 'clsx';
 
 import s from './filter-menu.module.scss';
 
+import { booksActions, BooksState } from '@/entities/books';
 import { Filter, Grid, List, Search } from '@/shared/assets';
+import { useAppDispatch, useAppSelector } from '@/shared/lib';
 import { Typography } from '@/shared/ui';
 
 export const FilterMenu = (): ReactElement => {
+  const dispatch = useAppDispatch();
+
+  const view = useAppSelector(state => state.books?.view);
+
+  const onClickViewMode = (view: BooksState['view']): void => {
+    dispatch(booksActions.changeView(view));
+  };
+
+  const styleButton = (type: BooksState['view']): string => {
+    return cn(s.button, { [s.button_active]: view === type });
+  };
+
+  const colorSvg = (type: BooksState['view']): string => {
+    return view === type ? '#FFF' : '#A7A7A7';
+  };
+
   return (
     <div className={s.filter}>
       <div className={s.filter__block}>
@@ -25,11 +43,21 @@ export const FilterMenu = (): ReactElement => {
         </button>
       </div>
       <div className={s.filter__block}>
-        <button className={cn(s.button, s.button_active)} aria-label="button" type="button">
-          <Grid />
+        <button
+          className={styleButton('GRID')}
+          onClick={() => onClickViewMode('GRID')}
+          aria-label="button"
+          type="button"
+        >
+          <Grid color={colorSvg('GRID')} />
         </button>
-        <button className={s.button} aria-label="button" type="button">
-          <List color="#A7A7A7" />
+        <button
+          className={styleButton('LIST')}
+          onClick={() => onClickViewMode('LIST')}
+          aria-label="button"
+          type="button"
+        >
+          <List color={colorSvg('LIST')} />
         </button>
       </div>
     </div>

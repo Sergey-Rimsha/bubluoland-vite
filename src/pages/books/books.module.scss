@@ -10,15 +10,23 @@
 
   &__wrap {
     display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
 
-    @media screen and (width <= 960px) {
-      gap: 32px 35px;
+    &_grid {
+      flex-wrap: wrap;
+      gap: 20px;
+
+      @media screen and (width <= 960px) {
+        gap: 32px 35px;
+      }
+
+      @media screen and (width <= 640px) {
+        justify-content: center;
+      }
     }
 
-    @media screen and (width <= 640px) {
-      justify-content: center;
+    &_list {
+      flex-direction: column;
+      gap: 16px;
     }
   }
 

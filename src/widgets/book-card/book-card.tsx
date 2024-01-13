@@ -16,12 +16,24 @@ interface PropsBookCard extends CardI {
 export const BookCard = ({ title, description, image, booking, view = 'GRID' }: PropsBookCard): ReactElement => {
   const cardStyle = cn(s.card, { [s.grid]: view === 'GRID' }, { [s.list]: view === 'LIST' });
 
-  const cardButton = (): ReactElement => {
+  const cardButton = (text: string): ReactElement => {
+    let variantBtn: 'primary' | 'secondary' | 'text' = 'primary';
+    let disabled = false;
+
+    if (text === 'Забронирована') {
+      variantBtn = 'secondary';
+    }
+
+    if (text.includes('занята')) {
+      variantBtn = 'secondary';
+      disabled = true;
+    }
+
     return (
       <div className={s.card__button}>
-        <Button className={s.card__button_size} variant="primary" size="sm">
+        <Button className={s.card__button_size} variant={variantBtn} disabled={disabled} size="sm">
           <Typography className={s.card__button_textSize} variant="body-sm" as="span">
-            {booking.message}
+            {text}
           </Typography>
         </Button>
       </div>
@@ -41,11 +53,12 @@ export const BookCard = ({ title, description, image, booking, view = 'GRID' }: 
             {description}
           </Typography>
         </div>
-        {view === 'GRID' && cardButton()}
-        {view === 'LIST' && (
+        {view === 'GRID' ? (
+          cardButton(booking.message)
+        ) : (
           <div className={s.card__block}>
             <Rating className={s.card__rating} />
-            {cardButton()}
+            {cardButton(booking.message)}
           </div>
         )}
       </div>

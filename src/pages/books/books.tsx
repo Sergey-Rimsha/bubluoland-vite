@@ -21,13 +21,11 @@ export const Books = (): ReactElement => {
   return (
     <div className={s.books}>
       <FilterMenu />
-      <div className={s.books__main}>
-        <section className={styleView}>
-          {cards.map(item => {
-            return <BookCard view={view} key={item.id} {...item} />;
-          })}
-        </section>
-      </div>
+      <section className={styleView}>
+        {cards.map(item => {
+          return <BookCard view={view} key={item.id} {...item} />;
+        })}
+      </section>
     </div>
   );
 };

@@ -3,7 +3,7 @@ import { SVGProps, memo, ReactElement } from 'react';
 
 export const DefaultImgBook = memo(
   (props: SVGProps<SVGSVGElement>): ReactElement => (
-    <svg xmlns="http://www.w3.org/2000/svg" width={48} height={48} fill="none" {...props}>
+    <svg viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" fill="none" {...props}>
       <path
         stroke="#363636"
         strokeLinejoin="round"

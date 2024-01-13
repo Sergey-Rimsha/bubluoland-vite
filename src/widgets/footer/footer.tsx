@@ -8,7 +8,9 @@ import { Typography } from '@/shared/ui';
 export const Footer = (): ReactElement => {
   return (
     <footer className={s.footer}>
-      <Typography variant="body-lg">© 2020-2023 Cleverland. Все права защищены.</Typography>
+      <Typography className={s.footer__description} variant="body-lg">
+        © 2020-2023 Cleverland. Все права защищены.
+      </Typography>
       <div className={s.footer__social}>
         <div className={s.footer__item}>
           <Facebook />

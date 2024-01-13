@@ -4,10 +4,13 @@
   align-items: center;
   justify-content: space-between;
 
-  height: 56px;
   margin-top: 62px;
 
   border-top: 1px solid #bfc4c9;
+
+  &__description {
+    margin: 16px 0;
+  }
 
   &__social {
     display: inline-flex;
@@ -24,7 +27,15 @@
     height: 24px;
   }
 
-  @media screen and (width <= 520px) {
+  @media screen and (width <= 590px) {
     justify-content: center;
+
+    &__social {
+      margin-bottom: 8px;
+    }
+
+    &__description {
+      text-align: center;
+    }
   }
 }

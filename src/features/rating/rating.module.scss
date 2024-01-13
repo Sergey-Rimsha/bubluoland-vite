@@ -1,7 +1,9 @@
 .rating {
-  height: 24px;
+  display: flex;
 
   & svg {
+    width: 24px;
+    height: 24px;
     margin-right: 6px;
   }
 }

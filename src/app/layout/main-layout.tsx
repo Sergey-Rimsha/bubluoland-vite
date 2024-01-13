@@ -11,10 +11,12 @@ export const MainLayout = (): ReactElement => {
   return (
     <div className={s.layout}>
       <div className={s.layout__container}>
-        <Header />
-        <div className={s.layout__block}>
-          <Menu />
-          <Outlet />
+        <div className={s.layout__wrap}>
+          <Header />
+          <div className={s.layout__block}>
+            <Menu />
+            <Outlet />
+          </div>
         </div>
         <Footer />
       </div>

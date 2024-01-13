@@ -7,8 +7,7 @@ import s from './book-card.module.scss';
 import { BooksState } from '@/entities/books';
 import { CardI } from '@/entities/stateCards.ts';
 import { Rating } from '@/features';
-import { DefaultImgBook } from '@/shared/assets';
-import { Button, Typography } from '@/shared/ui';
+import { BookImg, Button, Typography } from '@/shared/ui';
 
 interface PropsBookCard extends CardI {
   view?: BooksState['view'];
@@ -31,7 +30,7 @@ export const BookCard = ({ title, description, image, booking, view = 'GRID' }: 
 
   return (
     <div className={cardStyle}>
-      <div className={s.card__img}>{image[0] ? <img src={image[0]} alt="book" /> : <DefaultImgBook />}</div>
+      <BookImg className={s.card__img} image={image[0]} variant={view === 'GRID' ? 'bookCards' : 'bookList'} />
       <div className={s.card__wrap}>
         {view === 'GRID' && <Rating className={s.card__rating} />}
         <div className={s.card__wrap}>

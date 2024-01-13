@@ -1,5 +1,4 @@
 import { memo, ReactElement, SVGProps } from 'react';
-
 /* eslint-disable */
 
 export const BurgerMenu = memo(

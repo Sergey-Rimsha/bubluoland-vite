@@ -1,5 +1,4 @@
 import { SVGProps, memo, ReactElement } from 'react';
-
 /* eslint-disable */
 
 export const DefaultImgBook = memo(

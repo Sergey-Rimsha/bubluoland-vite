@@ -6,10 +6,11 @@
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",
-    "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview",
     "prepare": "husky install",
-    "lint-fix": "eslint --fix"
+    "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
+    "lint-fix": "eslint --fix --ext .js,.jsx,.ts,.tsx .",
+    "lint-style-fix": "npx stylelint \"**/*.scss\" --fix"
   },
   "lint-staged": {
     "**/*.{js,ts,jsx,tsx}": [

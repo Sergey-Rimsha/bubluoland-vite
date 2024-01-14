@@ -15,9 +15,7 @@ type VariantType =
   | 'body-lg'
   | 'body-sm'
   | 'info-lg'
-  | 'info-sm'
-  | 'btn-lg'
-  | 'btn-sm';
+  | 'info-sm';
 
 type TextProps<T extends ElementType> = {
   as?: T;

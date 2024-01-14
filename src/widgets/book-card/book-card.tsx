@@ -32,9 +32,7 @@ export const BookCard = ({ title, description, image, booking, view = 'GRID' }: 
     return (
       <div className={s.card__button}>
         <Button className={s.card__button_size} variant={variantBtn} disabled={disabled} size="sm">
-          <Typography className={s.card__button_textSize} variant="body-sm" as="span">
-            {text}
-          </Typography>
+          {text}
         </Button>
       </div>
     );
@@ -46,10 +44,10 @@ export const BookCard = ({ title, description, image, booking, view = 'GRID' }: 
       <div className={s.card__wrap}>
         {view === 'GRID' && <Rating className={s.card__rating} />}
         <div className={s.card__wrap}>
-          <Typography className={s.card__title} variant="sub-sm">
+          <Typography className={s.card__title} variant={view === 'GRID' ? 'sub-sm' : 'h5'}>
             {title}
           </Typography>
-          <Typography className={s.card__description} variant="body-sm">
+          <Typography className={s.card__description} variant={view === 'GRID' ? 'body-sm' : 'body-lg'}>
             {description}
           </Typography>
         </div>

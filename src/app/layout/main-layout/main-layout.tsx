@@ -4,7 +4,6 @@ import { Outlet } from 'react-router-dom';
 
 import s from './main-layout.module.scss';
 
-import { Menu } from '@/features';
 import { Footer, Header } from '@/widgets';
 
 export const MainLayout = (): ReactElement => {
@@ -13,10 +12,7 @@ export const MainLayout = (): ReactElement => {
       <div className={s.layout__container}>
         <div className={s.layout__wrap}>
           <Header />
-          <div className={s.layout__block}>
-            <Menu />
-            <Outlet />
-          </div>
+          <Outlet />
         </div>
         <Footer />
       </div>

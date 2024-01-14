@@ -1,5 +1,6 @@
 .menu {
-  min-width: 255px;
+  flex-shrink: 0;
+  width: 255px;
 
   &__title {
     position: relative;

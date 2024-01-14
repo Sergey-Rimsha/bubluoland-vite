@@ -1,0 +1,21 @@
+.booksLayout {
+  display: flex;
+  width: 100%;
+  margin-top: 47px;
+
+  &__wrap {
+    margin-left: 30px;
+  }
+
+  @media screen and (width <= 960px) {
+    margin-top: 32px;
+
+    .booksLayout__wrap {
+      margin-left: 0;
+    }
+  }
+
+  @media screen and (width <= 560px) {
+    margin-top: 8px;
+  }
+}

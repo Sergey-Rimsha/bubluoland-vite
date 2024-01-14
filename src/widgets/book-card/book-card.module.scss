@@ -1,5 +1,8 @@
 .card {
+  cursor: pointer;
+
   display: flex;
+
   background: var(--main-white);
   border-radius: 10px;
   box-shadow: var(--box-shadow);
@@ -57,7 +60,7 @@
     }
   }
 
-  @media screen and (width <= 450px) {
+  @media screen and (width <= 470px) {
     align-items: center;
     width: 288px;
 

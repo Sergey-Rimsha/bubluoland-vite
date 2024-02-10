@@ -1,7 +1,7 @@
 import { createBrowserRouter, Navigate } from 'react-router-dom';
 
 import { BookInfoLayout, BooksLayout, MainLayout } from '@/app/layout';
-import { BookInfo, Books } from '@/pages';
+import { BookInfo, Books, NodeFound } from '@/pages';
 
 export const router = createBrowserRouter([
   {
@@ -23,6 +23,10 @@ export const router = createBrowserRouter([
           { path: '/', element: <Navigate to="/bookInfo/:id" /> },
           { path: '/bookInfo/:id', element: <BookInfo /> },
         ],
+      },
+      {
+        path: '*',
+        element: <NodeFound />,
       },
     ],
   },

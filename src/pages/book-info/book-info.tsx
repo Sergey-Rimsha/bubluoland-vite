@@ -2,8 +2,8 @@ import { ReactElement } from 'react';
 
 import s from './book-info.module.scss';
 
-import { Rating } from '@/features';
 import { BookImg, Button, Typography } from '@/shared/ui';
+import { RatingBook } from '@/widgets';
 
 export const BookInfo = (): ReactElement => {
   return (
@@ -11,7 +11,7 @@ export const BookInfo = (): ReactElement => {
       <div className={s.bookInfo__wrap}>
         <BookImg variant="preview" />
         <div className={s.bookInfo__block}>
-          <Typography variant="h3" as="h3">
+          <Typography className={s.bookInfo__title} variant="h3" as="h3">
             Грокаем алгоритмы. Иллюстрированное пособие для программистов и любопытствующих
           </Typography>
           <Typography className={s.bookInfo__description} variant="h5" as="h5">
@@ -32,17 +32,13 @@ export const BookInfo = (): ReactElement => {
           </Typography>
         </div>
       </div>
-      <div className={s.rating}>
-        <Typography className={s.rating__title} variant="h5" as="h5">
-          Рейтинг
-        </Typography>
-        <div className={s.rating__block}>
-          <Rating />
-          <Typography variant="h5" as="h5">
-            4.3
-          </Typography>
-        </div>
-      </div>
+      <Typography className={s.subTitle} variant="h5" as="h5">
+        Рейтинг
+      </Typography>
+      <RatingBook className={s.rating} rating={4.3} />
+      <Typography className={s.subTitle} variant="h5" as="h5">
+        Подробная информация
+      </Typography>
     </div>
   );
 };

@@ -1,4 +1,4 @@
-import { ComponentProps, ReactElement } from 'react';
+import { ComponentProps, FC } from 'react';
 
 import cn from 'clsx';
 
@@ -6,7 +6,7 @@ import s from './rating.module.scss';
 
 import { Star } from '@/shared/assets';
 
-export const Rating = (props: ComponentProps<'div'>): ReactElement => {
+export const Rating: FC<ComponentProps<'div'>> = props => {
   const { className, ...rest } = props;
 
   const style = cn(s.rating, className);

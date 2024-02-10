@@ -39,16 +39,12 @@
 }
 
 .rating {
+  margin-top: 16px;
+}
+
+.subTitle {
+  width: 350px;
   margin-top: 42px;
-
-  &__title {
-    width: 350px;
-    padding-bottom: 16px;
-    border-bottom: 1px solid red;
-  }
-
-  &__block {
-    display: flex;
-    margin-top: 16px;
-  }
+  padding-bottom: 16px;
+  border-bottom: 1px solid var(--grey-black-10);
 }

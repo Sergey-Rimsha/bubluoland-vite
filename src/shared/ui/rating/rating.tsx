@@ -6,18 +6,34 @@ import s from './rating.module.scss';
 
 import { Star } from '@/shared/assets';
 
-export const Rating: FC<ComponentProps<'div'>> = props => {
-  const { className, ...rest } = props;
+interface RatingProps extends ComponentProps<'div'> {
+  rating?: number;
+  variant?: 'primary' | 'secondary';
+}
+
+export const Rating: FC<RatingProps> = props => {
+  const { className, rating, variant = 'primary', ...rest } = props;
 
   const style = cn(s.rating, className);
 
   return (
     <div className={style} {...rest}>
-      <Star active="active" />
-      <Star active="active" />
-      <Star />
-      <Star />
-      <Star />
+      <div className={s.rating__star}>
+        <Star active="active" />
+      </div>
+      <div className={s.rating__star}>
+        <Star active="active" />
+      </div>
+      <div className={s.rating__star}>
+        <Star />
+      </div>
+      <div className={s.rating__star}>
+        <Star />
+      </div>
+      <div className={s.rating__star}>
+        <Star />
+      </div>
+      {variant === 'primary' && <div className={s.rating__value}>{rating}</div>}
     </div>
   );
 };

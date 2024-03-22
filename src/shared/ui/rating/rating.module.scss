@@ -1,9 +1,30 @@
 .rating {
   display: flex;
 
-  & svg {
-    width: 24px;
-    height: 24px;
-    margin-right: 6px;
+  &__star {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 6px;
+
+    & svg {
+      width: 24px;
+      height: 24px;
+    }
+  }
+
+  &__star:first-child {
+    margin-left: 0;
+  }
+
+  &__value {
+    margin-left: 24px;
+
+    font-family: var(--font-family);
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 156%;
+    color: var(--main-dark);
+    letter-spacing: 0.01em;
   }
 }

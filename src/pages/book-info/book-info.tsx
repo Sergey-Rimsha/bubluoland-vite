@@ -1,9 +1,9 @@
 import { ReactElement } from 'react';
 
 import s from './book-info.module.scss';
+import { InfoBook } from './ui';
 
-import { BookImg, Button, Typography } from '@/shared/ui';
-import { RatingBook } from '@/widgets';
+import { BookImg, Button, Rating, Typography } from '@/shared/ui';
 
 export const BookInfo = (): ReactElement => {
   return (
@@ -35,10 +35,11 @@ export const BookInfo = (): ReactElement => {
       <Typography className={s.subTitle} variant="h5" as="h5">
         Рейтинг
       </Typography>
-      <RatingBook className={s.rating} rating={4.3} />
+      <Rating className={s.rating} rating={4.3} />
       <Typography className={s.subTitle} variant="h5" as="h5">
         Подробная информация
       </Typography>
+      <InfoBook />
     </div>
   );
 };

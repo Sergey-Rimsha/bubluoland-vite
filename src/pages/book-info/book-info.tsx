@@ -3,6 +3,7 @@ import { ReactElement } from 'react';
 import s from './book-info.module.scss';
 import { InfoBook } from './ui';
 
+import { Review } from '@/pages/book-info/ui/review/review.tsx';
 import { BookImg, Button, Rating, Typography } from '@/shared/ui';
 
 export const BookInfo = (): ReactElement => {
@@ -40,6 +41,13 @@ export const BookInfo = (): ReactElement => {
         Подробная информация
       </Typography>
       <InfoBook />
+      <Typography className={s.subTitle} variant="h5" as="h5">
+        Отзывы
+      </Typography>
+      <div className={s.review}>
+        <Review />
+        <Button className={s.review__button}>оценить книгу</Button>
+      </div>
     </div>
   );
 };

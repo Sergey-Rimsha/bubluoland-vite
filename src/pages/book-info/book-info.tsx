@@ -1,12 +1,11 @@
-import { ReactElement } from 'react';
+import { FC } from 'react';
 
 import s from './book-info.module.scss';
-import { InfoBook } from './ui';
+import { InfoBook, Review } from './ui';
 
-import { Review } from '@/pages/book-info/ui/review/review.tsx';
 import { BookImg, Button, Rating, Typography } from '@/shared/ui';
 
-export const BookInfo = (): ReactElement => {
+export const BookInfo: FC = () => {
   return (
     <div className={s.bookInfo}>
       <div className={s.bookInfo__wrap}>
@@ -21,17 +20,31 @@ export const BookInfo = (): ReactElement => {
           <Button className={s.bookInfo__button} variant="primary" size="lg">
             Забронировать
           </Button>
-          <Typography className={s.bookInfo__subTitle} variant="h5" as="h5">
-            О книге
-          </Typography>
-          <Typography className={s.bookInfo__about} variant="body-lg" as="div">
-            Алгоритмы — это всего лишь пошаговые алгоритмы решения задач, и большинство таких задач уже были кем-то
-            решены, протестированы и проверены. Можно, конечно, погрузится в глубокую философию гениального Кнута,
-            изучить многостраничные фолианты с доказательствами и обоснованиями, но хотите ли вы тратить на это свое
-            время? Откройте великолепно иллюстрированную книгу и вы сразу поймете, что алгоритмы — это просто. А грокать
-            алгоритмы — это веселое и увлекательное занятие.
-          </Typography>
+          <div className={s.bookInfo__desktop}>
+            <Typography className={s.bookInfo__subTitle} variant="h5" as="h5">
+              О книге
+            </Typography>
+            <Typography className={s.bookInfo__about} variant="body-lg" as="div">
+              Алгоритмы — это всего лишь пошаговые алгоритмы решения задач, и большинство таких задач уже были кем-то
+              решены, протестированы и проверены. Можно, конечно, погрузится в глубокую философию гениального Кнута,
+              изучить многостраничные фолианты с доказательствами и обоснованиями, но хотите ли вы тратить на это свое
+              время? Откройте великолепно иллюстрированную книгу и вы сразу поймете, что алгоритмы — это просто. А
+              грокать алгоритмы — это веселое и увлекательное занятие.
+            </Typography>
+          </div>
         </div>
+      </div>
+      <div className={s.bookInfo__tablet}>
+        <Typography className={s.bookInfo__subTitle} variant="h5" as="h5">
+          О книге
+        </Typography>
+        <Typography className={s.bookInfo__about} variant="body-lg" as="div">
+          Алгоритмы — это всего лишь пошаговые алгоритмы решения задач, и большинство таких задач уже были кем-то
+          решены, протестированы и проверены. Можно, конечно, погрузится в глубокую философию гениального Кнута, изучить
+          многостраничные фолианты с доказательствами и обоснованиями, но хотите ли вы тратить на это свое время?
+          Откройте великолепно иллюстрированную книгу и вы сразу поймете, что алгоритмы — это просто. А грокать
+          алгоритмы — это веселое и увлекательное занятие.
+        </Typography>
       </div>
       <Typography className={s.subTitle} variant="h5" as="h5">
         Рейтинг

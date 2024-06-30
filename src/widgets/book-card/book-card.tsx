@@ -7,8 +7,7 @@ import s from './book-card.module.scss';
 
 import { BooksState } from '@/entities/books';
 import { CardI } from '@/entities/stateCards.ts';
-import { Rating } from '@/features';
-import { BookImg, Button, Typography } from '@/shared/ui';
+import { BookImg, Button, Rating, Typography } from '@/shared/ui';
 
 interface PropsBookCard extends CardI {
   view?: BooksState['view'];

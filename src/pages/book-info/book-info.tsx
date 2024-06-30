@@ -1,17 +1,17 @@
-import { ReactElement } from 'react';
+import { FC } from 'react';
 
 import s from './book-info.module.scss';
+import { InfoBook, Review } from './ui';
 
-import { Rating } from '@/features';
-import { BookImg, Button, Typography } from '@/shared/ui';
+import { BookImg, Button, Rating, Typography } from '@/shared/ui';
 
-export const BookInfo = (): ReactElement => {
+export const BookInfo: FC = () => {
   return (
     <div className={s.bookInfo}>
       <div className={s.bookInfo__wrap}>
         <BookImg variant="preview" />
         <div className={s.bookInfo__block}>
-          <Typography variant="h3" as="h3">
+          <Typography className={s.bookInfo__title} variant="h3" as="h3">
             Грокаем алгоритмы. Иллюстрированное пособие для программистов и любопытствующих
           </Typography>
           <Typography className={s.bookInfo__description} variant="h5" as="h5">
@@ -20,28 +20,46 @@ export const BookInfo = (): ReactElement => {
           <Button className={s.bookInfo__button} variant="primary" size="lg">
             Забронировать
           </Button>
-          <Typography className={s.bookInfo__subTitle} variant="h5" as="h5">
-            О книге
-          </Typography>
-          <Typography className={s.bookInfo__about} variant="body-lg" as="div">
-            Алгоритмы — это всего лишь пошаговые алгоритмы решения задач, и большинство таких задач уже были кем-то
-            решены, протестированы и проверены. Можно, конечно, погрузится в глубокую философию гениального Кнута,
-            изучить многостраничные фолианты с доказательствами и обоснованиями, но хотите ли вы тратить на это свое
-            время? Откройте великолепно иллюстрированную книгу и вы сразу поймете, что алгоритмы — это просто. А грокать
-            алгоритмы — это веселое и увлекательное занятие.
-          </Typography>
+          <div className={s.bookInfo__desktop}>
+            <Typography className={s.bookInfo__subTitle} variant="h5" as="h5">
+              О книге
+            </Typography>
+            <Typography className={s.bookInfo__about} variant="body-lg" as="div">
+              Алгоритмы — это всего лишь пошаговые алгоритмы решения задач, и большинство таких задач уже были кем-то
+              решены, протестированы и проверены. Можно, конечно, погрузится в глубокую философию гениального Кнута,
+              изучить многостраничные фолианты с доказательствами и обоснованиями, но хотите ли вы тратить на это свое
+              время? Откройте великолепно иллюстрированную книгу и вы сразу поймете, что алгоритмы — это просто. А
+              грокать алгоритмы — это веселое и увлекательное занятие.
+            </Typography>
+          </div>
         </div>
       </div>
-      <div className={s.rating}>
-        <Typography className={s.rating__title} variant="h5" as="h5">
-          Рейтинг
+      <div className={s.bookInfo__tablet}>
+        <Typography className={s.bookInfo__subTitle} variant="h5" as="h5">
+          О книге
         </Typography>
-        <div className={s.rating__block}>
-          <Rating />
-          <Typography variant="h5" as="h5">
-            4.3
-          </Typography>
-        </div>
+        <Typography className={s.bookInfo__about} variant="body-lg" as="div">
+          Алгоритмы — это всего лишь пошаговые алгоритмы решения задач, и большинство таких задач уже были кем-то
+          решены, протестированы и проверены. Можно, конечно, погрузится в глубокую философию гениального Кнута, изучить
+          многостраничные фолианты с доказательствами и обоснованиями, но хотите ли вы тратить на это свое время?
+          Откройте великолепно иллюстрированную книгу и вы сразу поймете, что алгоритмы — это просто. А грокать
+          алгоритмы — это веселое и увлекательное занятие.
+        </Typography>
+      </div>
+      <Typography className={s.subTitle} variant="h5" as="h5">
+        Рейтинг
+      </Typography>
+      <Rating className={s.rating} rating={4.3} />
+      <Typography className={s.subTitle} variant="h5" as="h5">
+        Подробная информация
+      </Typography>
+      <InfoBook />
+      <Typography className={s.subTitle} variant="h5" as="h5">
+        Отзывы
+      </Typography>
+      <div className={s.review}>
+        <Review />
+        <Button className={s.review__button}>оценить книгу</Button>
       </div>
     </div>
   );

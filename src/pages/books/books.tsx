@@ -1,4 +1,4 @@
-import { ReactElement } from 'react';
+import { FC } from 'react';
 
 import cn from 'clsx';
 
@@ -8,7 +8,7 @@ import { cards } from '@/entities/stateCards.ts';
 import { useAppSelector } from '@/shared/lib';
 import { BookCard } from '@/widgets';
 
-export const Books = (): ReactElement => {
+export const Books: FC = () => {
   const view = useAppSelector(state => state.books?.view);
 
   const styleView = cn(s.books, { [s.books_grid]: view === 'GRID' }, { [s.books_list]: view === 'LIST' });
